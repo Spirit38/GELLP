@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom right, #f8f9fa, #e9ecef);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="80.0" style="-fx-background-color: linear-gradient(to right, #e91e63, #ff5722); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);">
+         <children>
+            <Button fx:id="authentificationbuttonRetour" mnemonicParsing="false" onAction="#cancelAuthAction" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2; -fx-background-radius: 25; -fx-border-radius: 25; -fx-text-fill: white; -fx-font-weight: bold;" text="← Quitter">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="GELPP" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text fill="#ffffff99" strokeType="OUTSIDE" strokeWidth="0.0" text=" - Gestionnaire d'Événements pour Lotissements et Propriétés Partagées" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="8.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+         <content>
+            <VBox alignment="CENTER" spacing="40.0">
+               <padding>
+                  <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+               </padding>
+               <children>
+                  <VBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <Text fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#7f8c8d" strokeType="OUTSIDE" strokeWidth="0.0" text="Connectez-vous pour accéder à votre espace" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" maxWidth="800.0" spacing="50.0">
+                     <children>
+                        <VBox maxWidth="350.0" spacing="25.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
+                           </padding>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="12.0">
+                                 <children>
+                                    <Circle fill="linear-gradient(to bottom right, #e91e63, #ff5722)" radius="8.0" />
+                                    <Text fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Se connecter" textAlignment="LEFT">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+
+                              <VBox spacing="20.0">
+                                 <children>
+                                    <VBox spacing="8.0">
+                                       <children>
+                                          <Label fx:id="authentificationLabelLogin" style="-fx-font-weight: bold; -fx-text-fill: #34495e; -fx-font-size: 14;" text="Nom d'utilisateur" />
+                                          <TextField fx:id="authentificationTfLogin" promptText="Entrez votre nom d'utilisateur" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 12; -fx-font-size: 14;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="8.0">
+                                       <children>
+                                          <Label fx:id="authentificationLabelMdp" style="-fx-font-weight: bold; -fx-text-fill: #34495e; -fx-font-size: 14;" text="Mot de passe" />
+                                          <PasswordField fx:id="authentificationPfMdp" promptText="Entrez votre mot de passe" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 12; -fx-font-size: 14;" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+
+                              <Button fx:id="authentificationButtonSeConnecter" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#authentificationSeConnecterClick" prefHeight="45.0" style="-fx-background-color: linear-gradient(to right, #e91e63, #ff5722); -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 16; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);" text="Se connecter">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <Line endY="100.0" stroke="#e0e0e0" strokeWidth="2.0" />
+                              <Text fill="#7f8c8d" strokeType="OUTSIDE" strokeWidth="0.0" text="OU" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Line endY="100.0" stroke="#e0e0e0" strokeWidth="2.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" maxWidth="350.0" spacing="25.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="35.0" left="35.0" right="35.0" top="35.0" />
+                           </padding>
+                           <children>
+                              <HBox alignment="CENTER" spacing="12.0">
+                                 <children>
+                                    <Circle fill="linear-gradient(to bottom right, #ff5722, #ff9800)" radius="8.0" />
+                                    <Text fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Nouveau ?" textAlignment="LEFT">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+
+                              <VBox alignment="CENTER" spacing="20.0">
+                                 <children>
+                                    <Text fill="#7f8c8d" strokeType="OUTSIDE" strokeWidth="0.0" text="Créez votre compte pour commencer à gérer vos événements et membres." textAlignment="CENTER" wrappingWidth="250.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+
+                                    <Button fx:id="authentificationButtonSInscrire" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#authentificationSInscrireClick" prefHeight="45.0" style="-fx-background-color: transparent; -fx-text-fill: #ff5722; -fx-border-color: #ff5722; -fx-border-width: 2; -fx-background-radius: 10; -fx-border-radius: 10; -fx-font-size: 16; -fx-font-weight: bold;" text="Créer un compte">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" maxWidth="600.0" spacing="15.0" style="-fx-background-color: #f8f9fa; -fx-background-radius: 12; -fx-border-color: #e9ecef; -fx-border-radius: 12; -fx-border-width: 1;">
+                     <padding>
+                        <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <Circle fill="linear-gradient(to bottom right, #17a2b8, #007bff)" radius="6.0" />
+                              <Text fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Pourquoi utiliser GELPP ?" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <Text fill="#6c757d" strokeType="OUTSIDE" strokeWidth="0.0" text="Gérez facilement vos événements de copropriété, organisez vos membres et restez informé de toutes les activités de votre lotissement." textAlignment="CENTER" wrappingWidth="500.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+
+      <HBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #ecf0f1; -fx-border-color: #bdc3c7; -fx-border-width: 1 0 0 0;">
+         <children>
+            <Text fill="#7f8c8d" strokeType="OUTSIDE" strokeWidth="0.0" text="© 2025 GELPP - Tous droits réservés" textAlignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+</VBox>

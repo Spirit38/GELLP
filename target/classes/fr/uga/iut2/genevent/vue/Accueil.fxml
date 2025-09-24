@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="629.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom right, #f8f9fa, #e9ecef);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="80.0" style="-fx-background-color: linear-gradient(to right, #e91e63, #ff5722); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);">
+         <children>
+            <Button fx:id="accueilbuttonRetour" mnemonicParsing="false" onAction="#cancelAccueilAction" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2; -fx-background-radius: 25; -fx-border-radius: 25; -fx-text-fill: white; -fx-font-weight: bold;" text="← Se déconnecter">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="GELPP" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text fill="#ffffff99" strokeType="OUTSIDE" strokeWidth="0.0" text=" - Gestionnaire d'Événements pour Lotissements et Propriétés Partagées" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="8.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+         <content>
+            <VBox spacing="30.0">
+               <padding>
+                  <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+               </padding>
+               <children>
+                  <VBox spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                     <padding>
+                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                     </padding>
+                     <children>
+                        <Text fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Actions Principales" textAlignment="LEFT">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <HBox spacing="30.0">
+                           <children>
+                              <VBox spacing="15.0" style="-fx-background-color: #fafafa; -fx-background-radius: 12; -fx-border-color: #e0e0e0; -fx-border-radius: 12; -fx-border-width: 1;" HBox.hgrow="ALWAYS">
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Circle fill="linear-gradient(to bottom right, #e91e63, #ff5722)" radius="8.0" />
+                                          <Text fill="#34495e" strokeType="OUTSIDE" strokeWidth="0.0" text="Événements" textAlignment="LEFT">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <Button fx:id="accueilbuttonAjouterEvenements" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accueilAjoutEvenementCLick" style="-fx-background-color: linear-gradient(to right, #e91e63, #ff5722); -fx-text-fill: white; -fx-background-radius: 8; -fx-font-size: 14; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);" text="Ajouter un événement">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Images/plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button fx:id="accueilbuttonConsulterEvenements" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accueilConsulterEvenementClick" style="-fx-background-color: transparent; -fx-text-fill: #e91e63; -fx-border-color: #e91e63; -fx-border-width: 2; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 14; -fx-font-weight: bold;" text="Consulter les événements">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <VBox spacing="15.0" style="-fx-background-color: #fafafa; -fx-background-radius: 12; -fx-border-color: #e0e0e0; -fx-border-radius: 12; -fx-border-width: 1;" HBox.hgrow="ALWAYS">
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Circle fill="linear-gradient(to bottom right, #ff5722, #ff9800)" radius="8.0" />
+                                          <Text fill="#34495e" strokeType="OUTSIDE" strokeWidth="0.0" text="Membres" textAlignment="LEFT">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <Button fx:id="accueilbuttonAjouterMembre" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accueilAjoutMembreClick" style="-fx-background-color: linear-gradient(to right, #ff5722, #ff9800); -fx-text-fill: white; -fx-background-radius: 8; -fx-font-size: 14; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);" text="Ajouter un membre">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Images/plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button fx:id="accueilbuttonConsulterMembre" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accueilConsulterMembreClick" style="-fx-background-color: transparent; -fx-text-fill: #ff5722; -fx-border-color: #ff5722; -fx-border-width: 2; -fx-background-radius: 8; -fx-border-radius: 8; -fx-font-size: 14; -fx-font-weight: bold;" text="Consulter les membres">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                     <padding>
+                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="15.0">
+                           <children>
+                              <Circle fill="linear-gradient(to bottom right, #e91e63, #ff5722)" radius="6.0" />
+                              <Text fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Prochains Événements" textAlignment="LEFT">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <VBox spacing="12.0" style="-fx-background-color: #f8f9fa; -fx-background-radius: 10;">
+                           <padding>
+                              <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+                           </padding>
+                           <children>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="labelNomDesEvenements" style="-fx-font-weight: bold; -fx-text-fill: #34495e; -fx-font-size: 14;" text="Événements" />
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="labelDatesDesEvenements" style="-fx-font-weight: bold; -fx-text-fill: #34495e; -fx-font-size: 14;" text="Dates" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <GridPane fx:id="accueilgridProchainsEvenements">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.0" minWidth="10.0" prefWidth="389.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="349.0" minWidth="10.0" prefWidth="323.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #ecf0f1; -fx-border-color: #bdc3c7; -fx-border-width: 1 0 0 0;">
+         <children>
+            <Text fill="#7f8c8d" strokeType="OUTSIDE" strokeWidth="0.0" text="© 2025 GELPP - Tous droits réservés" textAlignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<VBox prefHeight="1070.0" prefWidth="900.0" style="-fx-background-color: linear-gradient(to bottom right, #f8f9fa, #e9ecef);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="80.0" style="-fx-background-color: linear-gradient(to right, #e91e63, #ff5722); -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);">
+         <children>
+            <Button fx:id="modifiereventSocialRetour" mnemonicParsing="false" onAction="#modifiereventSocialRetour" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2; -fx-background-radius: 25; -fx-border-radius: 25; -fx-text-fill: white; -fx-font-weight: bold;" text="← Retour">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="GELPP" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text fill="#ffffff99" strokeType="OUTSIDE" strokeWidth="0.0" text=" - Modifier Événement Social" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="8.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+         <content>
+            <VBox spacing="30.0">
+               <padding>
+                  <Insets bottom="30.0" left="40.0" right="40.0" top="30.0" />
+               </padding>
+               <children>
+                  <VBox prefHeight="636.0" prefWidth="802.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                     <padding>
+                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="15.0">
+                           <children>
+                              <Circle fill="linear-gradient(to bottom right, #e91e63, #ff5722)" radius="8.0" />
+                              <Text fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Informations sur l'événement social" textAlignment="LEFT">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox spacing="30.0">
+                           <children>
+                              <VBox prefHeight="587.0" prefWidth="382.0" spacing="20.0" style="-fx-background-color: #fafafa; -fx-background-radius: 12; -fx-border-color: #e0e0e0; -fx-border-radius: 12; -fx-border-width: 1;" HBox.hgrow="ALWAYS">
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Circle fill="linear-gradient(to bottom right, #e91e63, #ff5722)" radius="6.0" />
+                                          <Text fill="#34495e" strokeType="OUTSIDE" strokeWidth="0.0" text="Détails du lieu" textAlignment="LEFT">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="309.0" prefWidth="340.0" spacing="15.0">
+                                       <children>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="modifierevenementSociallabelTitreEvenement" style="-fx-font-weight: bold; -fx-text-fill: #34495e; -fx-font-size: 12;" text="Titre de l'événement :" />
+                                                <TextField fx:id="modifierevenementSocialtfTitreEvenement" promptText="Titre de l'événement officiel" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;" />
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="modifierlabelPrestataire" style="-fx-font-weight: bold; -fx-text-fill: #34495e; -fx-font-size: 12;" text="Prestataire :" />
+                                                <TextField fx:id="modifiertfPrestataire" promptText="Nom du prestataire" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;" />
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="modifierlabelNomLieu" style="-fx-font-weight: bold; -fx-text-fill: #34495e; -fx-font-size: 12;" text="Nom du lieu :" />
+                                                <TextField fx:id="modifiertfNomLieu" promptText="Nom du lieu de l'événement" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;" />
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="modifierevenementSociallabelAdresse" style="-fx-font-weight: bold; -fx-text-fill: #34495e; -fx-font-size: 12;" text="Adresse :" />
+                                                <TextField fx:id="modifierevenementSocialtfAdresse" promptText="Adresse" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;" />
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="modifierlabelCodePostal" style="-fx-font-weight: bold; -fx-text-fill: #34495e; -fx-font-size: 12;" text="Code postal :" />
+                                                <TextField fx:id="modifiertfCodePostal" promptText="Code postal" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="533.0" prefWidth="386.0" spacing="20.0" style="-fx-background-color: #fafafa; -fx-background-radius: 12; -fx-border-color: #e0e0e0; -fx-border-radius: 12; -fx-border-width: 1;" HBox.hgrow="ALWAYS">
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Circle fill="linear-gradient(to bottom right, #ff5722, #ff9800)" radius="6.0" />
+                                          <Text fill="#34495e" strokeType="OUTSIDE" strokeWidth="0.0" text="Paramètres de l'événement" textAlignment="LEFT">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <VBox spacing="15.0">
+                                       <children>
+                                          <VBox spacing="5.0">
+                                             <children>
+                                                <Label fx:id="modifierlabelCategorie" style="-fx-font-weight: bold; -fx-text-fill: #34495e; -fx-font-size: 12;" text="Catégorie :" />
+                                                <ComboBox fx:id="modifiercheckboxCategorie" maxWidth="1.7976931348623157E308" promptText="Sélectionner une catégorie" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 14;">
+                                                   <items>
+                                                      <FXCollections fx:factory="observableArrayList">
+                                                         <String fx:id="modifiervoisins" fx:value="Fête des voisins" />
+                                                         <String fx:id="modifierpetanque" fx:value="Pétanque" />
+                                                         <String fx:id="modifieranniv" fx:value="Anniversaire" />
+                                                         <String fx:id="modifierrepas" fx:value="Repas" />
+                                                         <String fx:id="modifierautre" fx:value="Autre" />
+                                                      </FXCollections>
+                                                   </items>
+                                                </ComboBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="10.0">
+                                             <children>
+                                                <Label fx:id="modifierlabelMineur" style="-fx-font-weight: bold; -fx-text-fill: #34495e; -fx-font-size: 12;" text="Les mineurs sont-ils autorisés ?" />
+                                                <HBox spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-border-color: #ddd; -fx-border-radius: 8; -fx-border-width: 1; -fx-padding: 10;">
+                                                   <children>
+                                                      <RadioButton fx:id="modifierradiobuttonOui" mnemonicParsing="false" style="-fx-text-fill: #34495e; -fx-font-size: 14;" text="Oui">
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="modifiermineur" />
+                                                         </toggleGroup></RadioButton>
+                                                      <RadioButton fx:id="modifierradiobuttonNon" mnemonicParsing="false" style="-fx-text-fill: #34495e; -fx-font-size: 14;" text="Non" toggleGroup="$mineur" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="15.0">
+                                             <children>
+                                                <VBox spacing="5.0">
+                                                   <children>
+                                                      <Label fx:id="modifierevenementSociallabelDateEvenement" style="-fx-font-weight: bold; -fx-text-fill: #34495e; -fx-font-size: 12;" text="Date et horaire de l'événement :" />
+                                                      <HBox spacing="10.0">
+                                                         <children>
+                                                            <DatePicker fx:id="modifierevenementSocialdpDateEvenement" promptText="Sélectionner la date" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 14;" HBox.hgrow="ALWAYS" />
+                                                            <TextField fx:id="modifierevenementSocialtfHoraireEvenement" onKeyPressed="#evenementSocialtfHoraireEvenementKeyPressed" prefWidth="80.0" promptText="HH:MM" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox spacing="5.0">
+                                                   <children>
+                                                      <Label fx:id="modifierevenementSociallabelBudget" style="-fx-font-weight: bold; -fx-text-fill: #34495e; -fx-font-size: 12;" text="Budget (€) :" />
+                                                      <TextField fx:id="modifierevenementSocialtfBudget" onKeyPressed="#evenementSocialtfBudgetKeyPressed" promptText="Montant du budget en euros" style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10; -fx-font-size: 14;" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox spacing="10.0">
+                                                   <children>
+                                                      <CheckBox fx:id="modifierevenementSocialcbEvenementTermine" style="-fx-font-size: 14; -fx-text-fill: #34495e; -fx-font-weight: bold;" text="Événement terminé" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                     <padding>
+                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="15.0">
+                           <children>
+                              <Circle fill="linear-gradient(to bottom right, #4CAF50, #8BC34A)" radius="8.0" />
+                              <Text fill="#2c3e50" strokeType="OUTSIDE" strokeWidth="0.0" text="Action" textAlignment="LEFT">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <Button fx:id="modifierbuttonAjouterEvenement" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#modifiereventSocialValidationOnClick" style="-fx-background-color: linear-gradient(to right, #e91e63, #ff5722); -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 16; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2); -fx-padding: 15;" text="Modifier l'événement">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../Images/plus.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #ecf0f1; -fx-border-color: #bdc3c7; -fx-border-width: 1 0 0 0;">
+         <children>
+            <Text fill="#7f8c8d" strokeType="OUTSIDE" strokeWidth="0.0" text="© 2025 GELPP - Tous droits réservés" textAlignment="CENTER">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+</VBox>
